@@ -13,8 +13,8 @@ function Navbar() {
     dispatch(searchSlice.actions.toggle());
   }
 
-  function handlerShowMenu(){
-    dispatch(menuSlice.actions.toggle())
+  function handlerShowMenu() {
+    dispatch(menuSlice.actions.toggle());
   }
 
   return (
