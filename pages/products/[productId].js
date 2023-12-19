@@ -7,6 +7,8 @@ function ProductDetailPage() {
   const [product, setProduct] = useState({});
   const params = useParams();
 
+  console.log(params)
+
   useEffect(() => {
     if (params) {
       fetch("/products.json")
