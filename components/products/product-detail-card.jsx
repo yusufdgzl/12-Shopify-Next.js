@@ -1,12 +1,37 @@
+import { useRef } from "react";
+import { useDispatch } from "react-redux";
+import cartSlice from "../store/cart-slice";
+
 function ProductDetailCard(props) {
+
+  const dispatch = useDispatch();
+
+  const amountRef = useRef();
+
+    function handlerAddToCart(e){
+      e.preventDefault();
+      const amountValue = amountRef.current.value;
+      const numberAmountValue = +amountValue
+
+      dispatch(cartSlice.actions.addItemToCart({
+        title : props.title,
+        img: props.img,
+        price: props.price,
+        amount: numberAmountValue,
+        id: props.id
+      }))
+     
+    }
+
   return (
+    
     <div className="flex justify-center py-10   ">
       <img
         className=" w-[700px] h-[700px]"
         src={props.img}
         alt={props.title}
       />
-      <div className=" w-[500px] h-[380px] flex flex-col justify-around ">
+      <form onSubmit={handlerAddToCart} className=" w-[500px] h-[380px] flex flex-col justify-around ">
         <h1 className=" text-[44px] font-mono font-bold">
           {props.title}
         </h1>
@@ -18,11 +43,12 @@ function ProductDetailCard(props) {
           min="1"
           max="5"
           defaultValue="1"
+          ref={amountRef}
         />
         <button className="border hover:border-2 h-12 rounded-full border-gray-500">
           Add to cart
         </button>
-      </div>
+      </form>
     </div>
   );
 }
