@@ -18,7 +18,7 @@ function Navbar() {
   }
 
   return (
-    <div className=" flex h-[150px]   justify-between items-center px-14  ">
+    <div className=" flex h-[150px]  justify-between items-center px-4 md:px-14  ">
       <div className="flex w-20 justify-between ">
         <button onClick={handlerShowMenu}>
           <MenuIcon />
@@ -30,7 +30,7 @@ function Navbar() {
       <Link href="/">
         <img
           src="https://mrs-space-cadet.myshopify.com/cdn/shop/files/MrsSpaceCadet_Black_Logo_RGB.png?v=1682965764&width=165"
-          alt=""
+          className=" md:w-[150px] w-[130px]"
         />
       </Link>
 

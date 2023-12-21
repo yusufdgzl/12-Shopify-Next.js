@@ -11,7 +11,7 @@ function Prodcuts() {
   }, []);
 
   return (
-    <div className="grid grid-cols-3 gap-12 my-14 gap-y-20 font-semibold tracking-widest ">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-12 mx-10 md:m-auto md:my-10 my-14 gap-y-20 font-semibold tracking-widest ">
         {
             products.map(item=> <ProductCart {...item} key={item.id} />)
         }
