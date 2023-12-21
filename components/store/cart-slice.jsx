@@ -23,8 +23,17 @@ const cartSlice = createSlice({
         });
       } else {
         existingItem.amount = existingItem.amount + newItem.amount;
-        existingItem.totalPrice = existingItem.totalPrice + newItem.price * newItem.amount;
-       
+        existingItem.totalPrice =
+          existingItem.totalPrice + newItem.price * newItem.amount;
+      }
+    },
+
+    removeItemToCart(state, actions) {
+      const id = actions.payload;
+      const existingItem = state.items.find((item) => item.id === id);
+      if (existingItem) {
+        state.items = state.items.filter((item) => item.id !== existingItem.id);
+        state.totalPrice = state.totalPrice - existingItem.totalPrice;
       }
     },
   },

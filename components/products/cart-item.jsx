@@ -1,6 +1,17 @@
+import { useDispatch } from "react-redux";
 import RemoveIcon from "../icons/remove-icon";
+import cartSlice from "../store/cart-slice";
 
 function CartItem(props) {
+
+  const dispatch = useDispatch();
+
+  function handlerRemoveItem(e,id){
+   e.preventDefault();
+   dispatch(cartSlice.actions.removeItemToCart(id))
+
+  }
+
   return (
     <>
       <div className="flex justify-between items-start my-6">
@@ -20,7 +31,7 @@ function CartItem(props) {
             defaultValue={props.amount}
             
           />
-          <button>
+          <button onClick={(e)=>handlerRemoveItem(e,props.id)}>
             <RemoveIcon />
           </button>
         </div>

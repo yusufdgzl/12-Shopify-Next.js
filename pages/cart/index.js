@@ -26,7 +26,7 @@ function Cart() {
         ))}
       </div>
       <div className="flex justify-around my-10">
-        <h2 className=" text-2xl">Total Price : ${totalPrice}</h2>
+        <h2 className=" text-2xl">Total Price : ${totalPrice.toString().substring(0,6)}</h2>
         <button className=" border-2 border-yellow-500 px-4 py-2 rounded-md hover:bg-yellow-500 hover:text-white">
           Approve
         </button>
