@@ -1,15 +1,25 @@
 import { useDispatch } from "react-redux";
 import RemoveIcon from "../icons/remove-icon";
 import cartSlice from "../store/cart-slice";
+import MinusIcon from "../icons/minus-icon";
+import PlusIcon from "../icons/plus-icon";
 
 function CartItem(props) {
-
   const dispatch = useDispatch();
 
-  function handlerRemoveItem(e,id){
-   e.preventDefault();
-   dispatch(cartSlice.actions.removeItemToCart(id))
+  function handlerRemoveItem(e, id) {
+    e.preventDefault();
+    dispatch(cartSlice.actions.removeItemToCart(id));
+  }
 
+  function handlerDecrease(e, id) {
+    e.preventDefault();
+    dispatch(cartSlice.actions.decreaseItem(id));
+  }
+
+  function handlerIncrease(e, id) {
+    e.preventDefault();
+    dispatch(cartSlice.actions.increaseItem(id));
   }
 
   return (
@@ -23,19 +33,27 @@ function CartItem(props) {
           </div>
         </div>
         <div></div>
-        <div className="flex">
-          <input
-            className="border-2 text-center mr-6 py-2 px-10"
-            type="number"
-            min="1"
-            defaultValue={props.amount}
-            
-          />
-          <button onClick={(e)=>handlerRemoveItem(e,props.id)}>
+        <form className="flex">
+          <div className="flex justify-center items-center text-center mx-8 border px-4">
+            <button onClick={(e) => handlerDecrease(e, props.id)}>
+              <MinusIcon />
+            </button>
+            <input
+              className=" text-center py-2 w-12 appearance-none "
+              min="1"
+              value={props.amount}
+              readOnly
+            />
+            <button onClick={(e) => handlerIncrease(e, props.id)}>
+              <PlusIcon />
+            </button>
+          </div>
+
+          <button onClick={(e) => handlerRemoveItem(e, props.id)}>
             <RemoveIcon />
           </button>
-        </div>
-        <h2>${props.totalPrice.toString().substring(0,6)}</h2>
+        </form>
+        <h2>${props.totalPrice.toString().substring(0, 6)}</h2>
       </div>
     </>
   );

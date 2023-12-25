@@ -18,7 +18,7 @@ function Navbar() {
   }
 
   return (
-    <div className=" flex h-[150px]  justify-between items-center px-4 md:px-14  ">
+    <div className="  w-full flex h-[150px]  justify-between items-center px-4 md:px-14  ">
       <div className="flex w-20 justify-between ">
         <button onClick={handlerShowMenu}>
           <MenuIcon />
