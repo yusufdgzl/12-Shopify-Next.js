@@ -10,7 +10,7 @@ function MenuDrawer() {
         <Link href="/" className="hover:bg-gray-100 px-6 ">PodCast</Link>
         <Link href="/" className="hover:bg-gray-100 px-6 ">Press</Link>
         <Link href="/" className="hover:bg-gray-100 px-6 ">Work With Me</Link>
-        <Link href="/" className="hover:bg-gray-100 px-6 ">Contact</Link>
+        <Link href="/contact" className="hover:bg-gray-100 px-6 ">Contact</Link>
       </ul>
     </div>
   );

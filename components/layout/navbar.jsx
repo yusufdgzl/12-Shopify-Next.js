@@ -2,12 +2,14 @@ import Link from "next/link";
 import CartIcon from "../icons/cart-icon";
 import MenuIcon from "../icons/menu-icon";
 import SearchIcon from "../icons/search-icon";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import searchSlice from "../store/search-slice";
 import menuSlice from "../store/menu-slice";
+import OffIcon from "../icons/off-icon";
 
 function Navbar() {
   const dispatch = useDispatch();
+  const menu = useSelector(state=> state.menu.menuIsVisible)
 
   function handlerShowSearch() {
     dispatch(searchSlice.actions.toggle());
@@ -21,7 +23,7 @@ function Navbar() {
     <div className="  w-full flex h-[150px]  justify-between items-center px-4 md:px-14  ">
       <div className="flex w-20 justify-between ">
         <button onClick={handlerShowMenu}>
-          <MenuIcon />
+         {!menu ? <MenuIcon /> : <OffIcon/>}
         </button>
         <button onClick={handlerShowSearch}>
           <SearchIcon />
