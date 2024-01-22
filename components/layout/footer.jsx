@@ -23,9 +23,9 @@ function Footer() {
           </div>
 
           <div className=" mt-4 sm:mt-0 sm:ml-4">
-            <span>İnstagram</span>
-            <span>Youtube</span>
-            <span>Tiktok</span>
+            <span></span>
+            <span></span>
+            <span></span>
           </div>
         </div>
       </div>

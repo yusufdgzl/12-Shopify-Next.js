@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import ProductCart from "./product-card";
+import ProductCard from "./product-card";
 import { useSelector } from "react-redux";
 
 function Prodcuts() {
@@ -20,7 +20,7 @@ function Prodcuts() {
   return (
     <div className="grid grid-cols-2 md:grid-cols-3 gap-12 mx-10 md:m-auto md:my-10 my-14 gap-y-20 font-semibold tracking-widest ">
       {filteredProduct.map((item) => (
-        <ProductCart {...item} key={item.id} />
+        <ProductCard {...item} key={item.id} />
       ))}
     </div>
   );
