@@ -4,37 +4,44 @@
         "id": 1,
         "title": "Memory of Ankara",
         "price": 30,
-        "img": "https://www.anitkabir.com.tr/Files/Urunler/3480/PL1-salkim-anahtarlik-anitkabir.jpg"
+        "img": "https://www.anitkabir.com.tr/Files/Urunler/3480/PL1-salkim-anahtarlik-anitkabir.jpg",
+        "featured" : true
       },
       {
         "id": 2,
         "title": "Memory of Istanbul",
         "price": 40,
-        "img": "https://www.myros.com/istanbul-temali-myros-metal-uclu-salkim-anahtarlik-40x90-mm-istanbul-myros-83675-35-B.jpg"
+        "img": "https://www.myros.com/istanbul-temali-myros-metal-uclu-salkim-anahtarlik-40x90-mm-istanbul-myros-83675-35-B.jpg",
+        "featured" : false
+        
       },
       {
         "id": 3,
         "title": "Memory of Izmir",
         "price": 50,
-        "img": "https://www.myros.com/izmir-temali-metal-kabartma-anahtarlik-izmir-myros-90445-39-B.jpg"
+        "img": "https://www.myros.com/izmir-temali-metal-kabartma-anahtarlik-izmir-myros-90445-39-B.jpg",
+        "featured" : true
       },
       {
         "id": 4,
         "title": "Memory of Bursa",
         "price": 60,
-        "img": "https://productimages.hepsiburada.net/s/5/375-375/9673557278770.jpg"
+        "img": "https://productimages.hepsiburada.net/s/5/375-375/9673557278770.jpg",
+        "featured" : false
       },
       {
         "id": 5,
         "title": "Memory of Eskisehir",
         "price": 70,
-        "img": "https://www.myros.com/eskisehir-temali-uv-baskili-yuvarlak-anahtarlik-38x100-mm-eskisehir-myros-116306-42-B.jpg"
+        "img": "https://www.myros.com/eskisehir-temali-uv-baskili-yuvarlak-anahtarlik-38x100-mm-eskisehir-myros-116306-42-B.jpg",
+        "featured" : true
       },
       {
         "id": 6,
         "title": "Memory of Nevsehir",
         "price": 80,
-        "img": "https://alcan.com.tr/uploads/product/image/hma50-01-nevsehir-kapadokya-cappadocia-saklim-anahtarlik-755.jpg"
+        "img": "https://alcan.com.tr/uploads/product/image/hma50-01-nevsehir-kapadokya-cappadocia-saklim-anahtarlik-755.jpg",
+        "featured" : false
       }
     ]
   

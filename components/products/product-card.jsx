@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 
-function ProductCart(props) {
+function ProductCard(props) {
 
   function handlerAddToDetailCard(){
    
@@ -27,4 +27,4 @@ function ProductCart(props) {
   );
 }
 
-export default ProductCart;
+export default ProductCard;

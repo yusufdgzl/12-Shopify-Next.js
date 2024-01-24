@@ -31,7 +31,7 @@ function ContactForm() {
   
         if (response.ok) {
           const result = await response.json();
-          console.log(result);
+          
         } else {
           console.error('Failed to save data');
         }

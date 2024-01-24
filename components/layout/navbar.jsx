@@ -46,7 +46,7 @@ function Navbar() {
                 : ""
             }
           >
-            {items.length}
+            {items.length === 0 ? "" : items.length}
           </span>
         </Link>
       </div>
